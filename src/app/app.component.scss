@@ -1,0 +1,71 @@
+
+@import '../assets/styles/variables';
+
+.Layout {
+  background-color: $_color-white;
+  padding: $_contentSpacing * 2;
+  position: relative;
+  &-background {
+    background-color: $_color-secondary;
+    height: 320px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &-content {
+    background-color: $-color-white;
+    border: 1px solid $_color-primary;
+
+    z-index: 2;
+    position: relative;
+    max-width: 800px;
+    width:  80%;
+    margin: 0 auto;
+    padding: $_contentSpacing * 2;
+    height: 100vh;
+
+    display: flex;
+
+  }
+  .Content {
+    &-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-main {
+      padding: 0 $_contentSpacing * 2;
+    }
+  }
+  .Profile {
+    
+    &-name {
+      font-size: 1.2rem;
+    }
+    &-picture {
+      border-radius: 50%;
+    }
+  }
+  .About {
+    &-footer {
+      display: flex;
+      border-top: 1px solid $_color-primary;
+      justify-content: space-between;
+    }
+    &Footer {
+      &-socialMedia {
+        display: flex;
+        justify-content: flex-end;
+        ul {
+          display: flex;
+          li {
+            padding: 0 16px;
+            list-style: none;
+          }
+        }
+      }
+    }
+  }
+  
+}

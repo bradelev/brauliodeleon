@@ -5,8 +5,12 @@
   background-color: $_color-white;
   padding: $_contentSpacing * 2;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   &-background {
-    background-color: $_color-secondary;
+    background-image: -webkit-radial-gradient(ellipse, #2a437c 0, #10203b 100%);
     height: 320px;
     left: 0;
     position: absolute;
@@ -15,15 +19,14 @@
   }
   &-content {
     background-color: $-color-white;
-    border: 1px solid $_color-primary;
+    border: 1px solid $_color-tertiary;
+    color: $_color-secondary;
 
     z-index: 2;
     position: relative;
     max-width: 800px;
     width:  80%;
-    margin: 0 auto;
     padding: $_contentSpacing * 2;
-    height: 100vh;
 
     display: flex;
 
@@ -42,26 +45,43 @@
     
     &-name {
       font-size: 1.2rem;
+      padding: 16px 0 0 0;
     }
     &-picture {
       border-radius: 50%;
     }
   }
   .About {
+    &-content {
+      p:last-child {
+        padding-bottom: 32px
+      }
+    }
     &-footer {
       display: flex;
-      border-top: 1px solid $_color-primary;
+      border-top: 1px solid $_color-tertiary;
       justify-content: space-between;
+      padding: 16px 0 64px 0;
+      color: $_color-secondary;
     }
     &Footer {
+      &-location {
+        .fa-globe-americas {
+          margin-right: 8px;
+        }
+      }
       &-socialMedia {
         display: flex;
         justify-content: flex-end;
         ul {
           display: flex;
           li {
-            padding: 0 16px;
+            padding: 0;
+            margin-right: 8px;
             list-style: none;
+            &:last-child {
+              margin-right: 0;
+            }
           }
         }
       }

@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - #{$_contentSpacing} * 4);
   &-background {
     background-image: -webkit-radial-gradient(ellipse, #2a437c 0, #10203b 100%);
     height: 320px;
@@ -48,6 +48,8 @@
       padding: 16px 0 0 0;
     }
     &-picture {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
     }
   }

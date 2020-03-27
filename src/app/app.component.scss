@@ -56,14 +56,14 @@
   .About {
     &-content {
       p:last-child {
-        padding-bottom: 32px
+        padding-bottom: $_contentSpacing;
       }
     }
     &-footer {
       display: flex;
       border-top: 1px solid $_color-tertiary;
       justify-content: space-between;
-      padding: 16px 0 64px 0;
+      padding: $_contentSpacing 0 0;
       color: $_color-secondary;
     }
     &Footer {

@@ -2,13 +2,13 @@
 @import '../assets/styles/variables';
 
 .Layout {
+  align-items: center;
   background-color: $_color-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: $_contentSpacing * 2;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - #{$_contentSpacing} * 4);
   &-background {
     background-image: -webkit-radial-gradient(ellipse, #2a437c 0, #10203b 100%);
     height: 320px;
@@ -17,28 +17,37 @@
     right: 0;
     top: 0;
   }
-  &-content {
+  &-card {
     background-color: $-color-white;
     border: 1px solid $_color-tertiary;
     color: $_color-secondary;
-
-    z-index: 2;
-    position: relative;
-    max-width: 800px;
-    width:  80%;
-    padding: $_contentSpacing * 2;
-
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: $_contentSpacing * 2;
+    max-width: 800px;
+    padding: $_contentSpacing;
+    position: relative;
+    width:  80%;
+    z-index: 2;
+    @media (min-width: 768px) {
+      padding: $_contentSpacing * 2;
+    }
+
 
   }
   .Content {
     &-profile {
+      align-items: center;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      padding-bottom: $_contentSpacing * 2;
     }
     &-main {
-      padding: 0 $_contentSpacing * 2;
+      padding: 0;
+      @media (min-width: 768px) {
+        padding: 0 $_contentSpacing * 2;
+      }
     }
   }
   .Profile {
@@ -48,9 +57,9 @@
       padding: 16px 0 0 0;
     }
     &-picture {
-      width: 150px;
-      height: 150px;
       border-radius: 50%;
+      height: 150px;
+      width: 150px;
     }
   }
   .About {
@@ -62,9 +71,9 @@
     &-footer {
       display: flex;
       border-top: 1px solid $_color-tertiary;
+      color: $_color-secondary;
       justify-content: space-between;
       padding: $_contentSpacing 0 0;
-      color: $_color-secondary;
     }
     &Footer {
       &-location {
@@ -79,8 +88,8 @@
           display: flex;
           li {
             padding: 0;
-            margin-right: 8px;
             list-style: none;
+            margin-right: 8px;
             &:last-child {
               margin-right: 0;
             }

@@ -1,50 +1,47 @@
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-/dist
-/tmp
-/out-tsc
-# Only exists if Bazel was run
-/bazel-out
-
 # dependencies
 /node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
 
-# profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
+# testing
+/coverage
 
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+# next.js
+/.next/
+/out/
 
-# IDE - VSCode
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# env files
+.env*.local
+.env
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDE
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.history/*
-
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-/typings
-.npmrc
-
-# System Files
-.DS_Store
-Thumbs.db
+.idea
+*.sublime-workspace
 
 # Claude Code config with credentials
 .claude/mcp_settings.json

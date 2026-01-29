@@ -45,3 +45,6 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Claude Code config with credentials
+.claude/mcp_settings.json

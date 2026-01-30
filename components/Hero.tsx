@@ -65,17 +65,17 @@ export function Hero(): JSX.Element {
         {/* Title & Location */}
         <div className="mt-4 space-y-1 sm:mt-6">
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 sm:text-xl">
-            Software Engineer & Tech Leader
+            Senior Frontend Engineer · Head of Engineering
           </p>
           <p className="text-base text-gray-600 dark:text-gray-400 sm:text-lg">
-            📍 Based in San Francisco Bay Area
+            📍 Montevideo, Uruguay · Remote
           </p>
         </div>
 
         {/* Tagline */}
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:mt-8 sm:text-xl">
-          Building the digital future, one line of code at a time. Passionate
-          about creating scalable solutions and leading high-performing teams.
+          Hands-on engineering leader with 10+ years building enterprise-scale applications.
+          Combining technical excellence with team leadership to deliver quality software that matters.
         </p>
 
         {/* Social Links */}

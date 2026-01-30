@@ -8,31 +8,22 @@ type Post = {
   tags: string[];
 };
 
-// Mock data - In a real app, this would come from reading /content/blog files
 const featuredPosts: Post[] = [
   {
-    slug: "refactoring-with-ai-skills",
-    title: "Refactoring a Next.js Project with AI Skills: A Living Document",
+    slug: "ces-2025-reflections",
+    title: "Reflections on CES 2025: Innovation, Gaps, and Shared Responsibility",
     excerpt:
-      "A comprehensive chronicle of refactoring an entire Next.js codebase to follow best practices defined in AI skills.",
-    date: "2026-01-30",
-    tags: ["nextjs", "refactoring", "ai", "best-practices"],
+      "My observations from CES 2025 on technological innovation, market accessibility, labor reconversion, and the responsibility of both industry and emerging regions.",
+    date: "2025-01-28",
+    tags: ["technology", "innovation", "ces", "emerging-markets", "ai"],
   },
   {
-    slug: "building-scalable-nextjs-apps",
-    title: "Building Scalable Next.js Applications",
+    slug: "teamwork-unlocks-new-goals",
+    title: "Teamwork Unlocks New Goals",
     excerpt:
-      "Best practices and patterns for building Next.js applications that scale with your team and user base.",
-    date: "2026-01-28",
-    tags: ["nextjs", "react", "architecture", "scalability"],
-  },
-  {
-    slug: "typescript-best-practices",
-    title: "TypeScript Best Practices for React Developers",
-    excerpt:
-      "Essential TypeScript patterns that every React developer should know to write safer, more maintainable code.",
-    date: "2026-01-25",
-    tags: ["typescript", "react", "best-practices", "types"],
+      "A personal reflection on how shifting focus from individual achievement to team collaboration transformed both my cycling performance and professional mindset.",
+    date: "2025-12-29",
+    tags: ["leadership", "teamwork", "growth", "collaboration"],
   },
 ];
 

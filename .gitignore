@@ -45,3 +45,6 @@ next-env.d.ts
 
 # Claude Code config with credentials
 .claude/mcp_settings.json
+
+# Context assets (private info)
+docs/context-assets/

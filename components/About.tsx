@@ -11,28 +11,27 @@ export function About(): JSX.Element {
           {/* Bio Content */}
           <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:text-lg">
             <p>
-              I&apos;m a software engineer and technology leader with over a decade
-              of experience building scalable web applications and leading
-              high-performing engineering teams. My passion lies in creating
-              elegant solutions to complex problems and fostering cultures of
-              innovation and continuous improvement.
+              I&apos;m a Senior Frontend Engineer and Head of Engineering at Arionkoder,
+              with over 10 years of experience building and maintaining enterprise-scale
+              web applications. Currently, I work hands-on in production systems for
+              high-profile clients, combining technical excellence with leadership
+              responsibilities in a remote-first environment.
             </p>
 
             <p>
-              Throughout my career, I&apos;ve worked across the full stack,
-              specializing in modern web technologies like React, Next.js,
-              TypeScript, and Node.js. I believe in writing clean, maintainable
-              code that stands the test of time, and I&apos;m always exploring new
-              tools and patterns that can improve developer experience and
-              product quality.
+              My technical expertise spans React and Angular ecosystems, with a strong
+              focus on complex user flows, accessibility, and incremental delivery using
+              feature flags. I&apos;ve worked on enterprise platforms for companies like
+              American Express and Toyota, where I&apos;ve led frontend stabilization
+              efforts, significantly reduced production errors, and established coding
+              standards that improved overall code quality.
             </p>
 
             <p>
-              When I&apos;m not coding, you&apos;ll find me mentoring junior developers,
-              contributing to open-source projects, or writing about software
-              engineering best practices. I&apos;m particularly interested in
-              developer tooling, AI-assisted development, and the intersection
-              of technology and human-centered design.
+              I believe in writing clean, maintainable code while fostering cultures of
+              continuous improvement. Whether I&apos;m mentoring engineers, conducting code
+              reviews, or implementing new features, my goal is always to deliver quality
+              software that provides real value to users and sets teams up for long-term success.
             </p>
           </div>
 
@@ -47,15 +46,15 @@ export function About(): JSX.Element {
                   Frontend Development
                 </h4>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  React, Next.js, TypeScript, Tailwind CSS
+                  React, Angular, TypeScript, JavaScript (ES6+)
                 </p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
-                  Backend Development
+                  Enterprise Applications
                 </h4>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Node.js, APIs, Databases, Cloud Infrastructure
+                  Complex Forms, Feature Flags, Accessibility (a11y)
                 </p>
               </div>
               <div>
@@ -63,15 +62,15 @@ export function About(): JSX.Element {
                   Technical Leadership
                 </h4>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Team Building, Architecture, Code Review, Mentoring
+                  Team Building, Mentoring, Code Review, Best Practices
                 </p>
               </div>
               <div>
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
-                  Developer Experience
+                  Quality & Stabilization
                 </h4>
                 <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Tooling, CI/CD, Best Practices, Documentation
+                  Error Reduction, Code Quality, Frontend Optimization
                 </p>
               </div>
             </div>

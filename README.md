@@ -46,6 +46,17 @@ npm run start    # Start production server
 npm run lint     # Run ESLint
 ```
 
-## Brand Strategy
+## Deployment
 
-See [docs/brand-strategy.md](docs/brand-strategy.md) for brand messaging and positioning.
+This project is configured for deployment on Vercel.
+
+See [docs/deployment.md](docs/deployment.md) for detailed deployment instructions.
+
+**Quick Deploy:**
+1. Push to `main` branch for production deployment
+2. Create PR for preview deployments
+
+## Documentation
+
+- [Brand Strategy](docs/brand-strategy.md) - Brand messaging and positioning
+- [Deployment Guide](docs/deployment.md) - Vercel deployment instructions

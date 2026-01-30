@@ -5,7 +5,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800">
-      <div className="mx-auto max-w-5xl px-6 py-8">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-sm text-gray-600 dark:text-gray-400">
             © {currentYear} Braulio De Leon. All rights reserved.

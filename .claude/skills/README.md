@@ -30,6 +30,14 @@ This directory contains AI skills that define coding patterns and best practices
   - Generics and utility types
   - React-specific types
 
+### Workflow
+
+- **[github-pr.md](github-pr.md)** - GitHub Pull Request best practices
+  - PR title and body format
+  - Conventional commits
+  - GitHub CLI commands
+  - Code review workflow
+
 ## How It Works
 
 When Claude Code detects you're working in a specific context (e.g., editing a React component), it automatically reads and applies the relevant skill patterns to its responses.

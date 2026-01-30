@@ -1,4 +1,4 @@
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-24">
       <div className="flex flex-col items-center justify-center text-center">

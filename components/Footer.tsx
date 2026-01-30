@@ -1,7 +1,19 @@
 import Link from "next/link";
 
-export function Footer() {
-  const currentYear = new Date().getFullYear();
+type SocialLink = {
+  href: string;
+  label: string;
+  external?: boolean;
+};
+
+const socialLinks: SocialLink[] = [
+  { href: "https://github.com/bradelev", label: "GitHub", external: true },
+  { href: "https://linkedin.com/in/brauliodeleon", label: "LinkedIn", external: true },
+  { href: "mailto:hi@brauliodeleon.com", label: "Email" },
+];
+
+export function Footer(): JSX.Element {
+  const currentYear: number = new Date().getFullYear();
 
   return (
     <footer className="border-t border-gray-200 dark:border-gray-800">
@@ -11,28 +23,16 @@ export function Footer() {
             © {currentYear} Braulio De Leon. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <Link
-              href="https://github.com/bradelev"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-            >
-              GitHub
-            </Link>
-            <Link
-              href="https://linkedin.com/in/brauliodeleon"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-            >
-              LinkedIn
-            </Link>
-            <Link
-              href="mailto:hi@brauliodeleon.com"
-              className="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
-            >
-              Email
-            </Link>
+            {socialLinks.map(({ href, label, external }) => (
+              <Link
+                key={href}
+                href={href}
+                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
+              >
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

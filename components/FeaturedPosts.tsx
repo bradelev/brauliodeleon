@@ -10,6 +10,14 @@ type Post = {
 
 const featuredPosts: Post[] = [
   {
+    slug: "building-with-ai-automation",
+    title: "Building a Personal Brand with AI-Powered Automation: From One Prompt to Production",
+    excerpt:
+      "How I rebuilt my entire personal website in hours using Claude Code, with automated Jira project management, GitHub integration, and Vercel deployment—all from a single initial prompt.",
+    date: "2026-01-30",
+    tags: ["ai", "automation", "claude-code", "nextjs", "devops", "productivity"],
+  },
+  {
     slug: "ces-2025-reflections",
     title: "Reflections on CES 2025: Innovation, Gaps, and Shared Responsibility",
     excerpt:

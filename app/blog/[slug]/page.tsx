@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
   const { metadata, content } = post;
 
   return (
-    <article className="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
+    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
       {/* Back Link */}
       <Link
         href="/blog"
@@ -82,8 +82,8 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
       </Link>
 
       {/* Post Header */}
-      <header className="mt-8 border-b border-gray-200 pb-8 dark:border-gray-700">
-        <time className="text-sm text-gray-500 dark:text-gray-400" dateTime={metadata.date}>
+      <header className="mt-12 border-b border-gray-200 pb-10 dark:border-gray-700">
+        <time className="text-sm font-medium text-gray-500 dark:text-gray-400" dateTime={metadata.date}>
           {new Date(metadata.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",
@@ -91,32 +91,32 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
           })}
         </time>
 
-        <h1 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+        <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
           {metadata.title}
         </h1>
 
-        <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:text-xl">
+        <p className="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-400">
           {metadata.excerpt}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mt-8 flex flex-wrap gap-2">
           {metadata.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+              className="rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300"
             >
               {tag}
             </span>
           ))}
         </div>
 
-        <div className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-6 text-sm text-gray-600 dark:text-gray-400">
           By <span className="font-medium">{metadata.author}</span>
         </div>
       </header>
 
       {/* Post Content */}
-      <div className="prose prose-gray mt-8 max-w-none dark:prose-invert prose-headings:font-bold prose-headings:tracking-tight prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-p:leading-relaxed prose-a:text-brand-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-4 prose-blockquote:border-brand-primary prose-blockquote:pl-4 prose-blockquote:italic prose-code:rounded prose-code:bg-gray-100 prose-code:px-1 prose-code:py-0.5 prose-code:font-mono prose-code:text-sm prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-gray-800 sm:prose-lg">
+      <div className="prose prose-lg prose-gray mt-12 max-w-none dark:prose-invert">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </div>
     </article>

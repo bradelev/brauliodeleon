@@ -9,7 +9,7 @@ export function About(): JSX.Element {
           </h2>
 
           {/* Bio Content */}
-          <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-600 dark:text-gray-400 sm:text-lg">
+          <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-700 dark:text-gray-300 sm:text-lg">
             <p>
               I&apos;m a Senior Frontend Engineer and Head of Engineering at Arionkoder,
               with over 10 years of experience building and maintaining enterprise-scale
@@ -45,7 +45,7 @@ export function About(): JSX.Element {
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
                   Frontend Development
                 </h4>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   React, Angular, TypeScript, JavaScript (ES6+)
                 </p>
               </div>
@@ -53,7 +53,7 @@ export function About(): JSX.Element {
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
                   Enterprise Applications
                 </h4>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   Complex Forms, Feature Flags, Accessibility (a11y)
                 </p>
               </div>
@@ -61,7 +61,7 @@ export function About(): JSX.Element {
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
                   Technical Leadership
                 </h4>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   Team Building, Mentoring, Code Review, Best Practices
                 </p>
               </div>
@@ -69,7 +69,7 @@ export function About(): JSX.Element {
                 <h4 className="font-medium text-gray-900 dark:text-gray-100">
                   Quality & Stabilization
                 </h4>
-                <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
                   Error Reduction, Code Quality, Frontend Optimization
                 </p>
               </div>

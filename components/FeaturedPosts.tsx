@@ -44,7 +44,7 @@ export function FeaturedPosts(): JSX.Element {
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
               Recent Writing
             </h2>
-            <p className="mt-2 text-base text-gray-600 dark:text-gray-400 sm:text-lg">
+            <p className="mt-2 text-base text-gray-700 dark:text-gray-300 sm:text-lg">
               Thoughts on software engineering, leadership, and technology
             </p>
           </div>
@@ -72,7 +72,7 @@ export function FeaturedPosts(): JSX.Element {
                   {title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
                   {excerpt}
                 </p>
               </div>

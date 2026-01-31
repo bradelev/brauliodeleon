@@ -84,7 +84,7 @@ export function Skills(): JSX.Element {
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           What I Do
         </h2>
-        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 sm:mt-6">
+        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300 sm:mt-6">
           Core competencies in frontend engineering and team leadership
         </p>
       </div>
@@ -99,7 +99,7 @@ export function Skills(): JSX.Element {
               {icon}
             </div>
             <h3 className="text-xl font-semibold">{title}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-gray-600 dark:text-gray-400 sm:text-base">
+            <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300 sm:text-base">
               {description}
             </p>
           </div>

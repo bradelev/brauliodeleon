@@ -49,7 +49,7 @@ export default async function BlogPage(): Promise<JSX.Element> {
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
           Blog
         </h1>
-        <p className="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+        <p className="mt-6 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
           Thoughts on software engineering, leadership, and technology
         </p>
       </header>
@@ -74,7 +74,7 @@ export default async function BlogPage(): Promise<JSX.Element> {
               </h2>
 
               {/* Excerpt */}
-              <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-400">
+              <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
                 {excerpt}
               </p>
 

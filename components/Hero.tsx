@@ -67,13 +67,13 @@ export function Hero(): JSX.Element {
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 sm:text-xl">
             Senior Frontend Engineer · Head of Engineering
           </p>
-          <p className="text-base text-gray-600 dark:text-gray-400 sm:text-lg">
+          <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
             📍 Montevideo, Uruguay · Remote
           </p>
         </div>
 
         {/* Tagline */}
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:mt-8 sm:text-xl">
+        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700 dark:text-gray-300 sm:mt-8 sm:text-xl">
           Hands-on engineering leader with 10+ years building enterprise-scale applications.
           Combining technical excellence with team leadership to deliver quality software that matters.
         </p>

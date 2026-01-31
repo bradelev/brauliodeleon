@@ -95,7 +95,7 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
           {metadata.title}
         </h1>
 
-        <p className="mt-6 text-xl leading-relaxed text-gray-600 dark:text-gray-400">
+        <p className="mt-6 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
           {metadata.excerpt}
         </p>
 
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
           ))}
         </div>
 
-        <div className="mt-6 text-sm text-gray-600 dark:text-gray-400">
+        <div className="mt-6 text-sm text-gray-700 dark:text-gray-300">
           By <span className="font-medium">{metadata.author}</span>
         </div>
       </header>

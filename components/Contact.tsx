@@ -58,7 +58,7 @@ export function Contact(): JSX.Element {
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Let&apos;s Work Together
         </h2>
-        <p className="mt-4 text-lg leading-relaxed text-gray-600 dark:text-gray-400 sm:mt-6 sm:text-xl">
+        <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300 sm:mt-6 sm:text-xl">
           I&apos;m always interested in hearing about new projects, opportunities, or just having a
           conversation about technology. Feel free to reach out!
         </p>
@@ -76,13 +76,13 @@ export function Contact(): JSX.Element {
               {icon}
             </div>
             <h3 className="mt-4 text-lg font-semibold">{label}</h3>
-            <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">{description}</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{description}</p>
           </Link>
         ))}
       </div>
 
       <div className="mt-12 text-center sm:mt-16">
-        <p className="text-base text-gray-600 dark:text-gray-400">
+        <p className="text-base text-gray-700 dark:text-gray-300">
           Looking forward to connecting with you and exploring how we can create something amazing
           together.
         </p>

@@ -6,7 +6,7 @@ author: "Braulio De Leon"
 tags: ["leadership", "teamwork", "growth", "collaboration"]
 ---
 
-# Teamwork Unlocks New Goals
+<!-- # Teamwork Unlocks New Goals -->
 
 During the pandemic, I started cycling as a way to clear my head and take care of my health. I&apos;ve always enjoyed challenging myself, so I focused on riding longer distances and pushing my limits.
 

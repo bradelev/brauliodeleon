@@ -6,7 +6,7 @@ author: "Braulio De Leon"
 tags: ["ai", "security", "prompt-injection", "openclaw", "engineering-leadership", "best-practices"]
 ---
 
-# Navigating AI Security in 2026: Lessons from OpenClaw and the Prompt Injection Era
+<!-- # Navigating AI Security in 2026: Lessons from OpenClaw and the Prompt Injection Era -->
 
 ## The Paradox of AI Innovation
 

@@ -6,7 +6,7 @@ author: "Braulio De Leon"
 tags: ["ai", "automation", "claude-code", "nextjs", "devops", "productivity"]
 ---
 
-# Building a Personal Brand with AI-Powered Automation: From One Prompt to Production
+<!-- # Building a Personal Brand with AI-Powered Automation: From One Prompt to Production -->
 
 ## The Challenge: Building a Personal Brand at Scale
 

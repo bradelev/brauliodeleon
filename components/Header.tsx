@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,7 +26,6 @@ export function Header(): JSX.Element {
                 {label}
               </Link>
             ))}
-            <ThemeToggle />
           </div>
         </div>
       </nav>

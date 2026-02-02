@@ -6,7 +6,7 @@ author: "Braulio De Leon"
 tags: ["engineering-leadership", "management", "team-motivation", "career", "leadership"]
 ---
 
-# The Middle Management Balancing Act: Power, Visibility, and Keeping Teams Motivated
+<!-- # The Middle Management Balancing Act: Power, Visibility, and Keeping Teams Motivated -->
 
 ## The Uncomfortable Truth About Middle Management
 

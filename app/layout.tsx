@@ -13,18 +13,19 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Braulio De Leon - Software Engineer & Tech Leader",
+    default: "Braulio De Leon - Staff Frontend Engineer",
     template: "%s | Braulio De Leon",
   },
   description:
-    "Building the digital future, one line of code at a time. Personal website and blog of Braulio De Leon, software engineer and technology leader.",
+    "Staff Frontend Engineer focused on payments, auth and checkout. 15+ years building enterprise frontends in React and TypeScript for US companies, including American Express and Toyota.",
   keywords: [
-    "software engineer",
-    "tech leader",
-    "web development",
-    "nextjs",
-    "typescript",
+    "staff frontend engineer",
     "react",
+    "typescript",
+    "nextjs",
+    "payments",
+    "3d secure",
+    "checkout",
   ],
   authors: [{ name: "Braulio De Leon" }],
   creator: "Braulio De Leon",
@@ -32,14 +33,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://brauliodeleon.com",
-    title: "Braulio De Leon - Software Engineer & Tech Leader",
-    description: "Building the digital future, one line of code at a time",
+    title: "Braulio De Leon - Staff Frontend Engineer",
+    description:
+      "Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
     siteName: "Braulio De Leon",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Braulio De Leon - Software Engineer & Tech Leader",
-    description: "Building the digital future, one line of code at a time",
+    title: "Braulio De Leon - Staff Frontend Engineer",
+    description:
+      "Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
   },
 };
 

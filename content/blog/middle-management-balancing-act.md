@@ -2,6 +2,7 @@
 title: "The Middle Management Balancing Act: Power, Visibility, and Keeping Teams Motivated"
 date: "2026-01-31"
 excerpt: "Middle management is the hardest job in tech: you're accountable for results without real authority, juggling stakeholder demands while keeping your team motivated. Here's how to survive—and thrive—in the squeeze."
+draft: true
 author: "Braulio De Leon"
 tags: ["engineering-leadership", "management", "team-motivation", "career", "leadership"]
 ---

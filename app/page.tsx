@@ -1,6 +1,6 @@
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { Skills } from "@/components/Skills";
+import { Experience } from "@/components/Experience";
 import { FeaturedPosts } from "@/components/FeaturedPosts";
 import { Contact } from "@/components/Contact";
 
@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
     <>
       <Hero />
       <About />
-      <Skills />
+      <Experience />
       <FeaturedPosts />
       <Contact />
     </>

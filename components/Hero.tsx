@@ -65,17 +65,19 @@ export function Hero(): JSX.Element {
         {/* Title & Location */}
         <div className="mt-4 space-y-1 sm:mt-6">
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 sm:text-xl">
-            Senior Frontend Engineer · Head of Engineering
+            Staff Frontend Engineer · Payments, Auth &amp; Checkout · React ·
+            TypeScript
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
-            📍 Montevideo, Uruguay · Remote
+            📍 Montevideo, Uruguay · Remote (US time zones)
           </p>
         </div>
 
         {/* Tagline */}
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-gray-700 dark:text-gray-300 sm:mt-8 sm:text-xl">
-          Hands-on engineering leader with 10+ years building enterprise-scale applications.
-          Combining technical excellence with team leadership to deliver quality software that matters.
+          15+ years building enterprise frontends for US companies, including
+          American Express and Toyota. Most recently owned the frontend of 3D
+          Secure card authentication for the Amex travel platform.
         </p>
 
         {/* Social Links */}
@@ -84,7 +86,10 @@ export function Hero(): JSX.Element {
             <Link
               key={href}
               href={href}
-              {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+              {...(external && {
+                target: "_blank",
+                rel: "noopener noreferrer",
+              })}
               className="text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
               aria-label={label}
             >
@@ -96,10 +101,12 @@ export function Hero(): JSX.Element {
         {/* Call to Action */}
         <div className="mt-10 flex flex-col gap-4 sm:mt-12 sm:flex-row">
           <Link
-            href="#about"
+            href="/braulio-de-leon-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-lg bg-brand-primary px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-700 sm:px-8 sm:text-lg"
           >
-            Learn More
+            Download CV
           </Link>
           <Link
             href="#contact"

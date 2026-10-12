@@ -10,6 +10,7 @@ type Post = {
   date: string;
   tags: string[];
   author: string;
+  draft: boolean;
 };
 
 async function getPosts(): Promise<Post[]> {
@@ -32,11 +33,14 @@ async function getPosts(): Promise<Post[]> {
           date: data.date,
           tags: data.tags || [],
           author: data.author,
+          draft: data.draft === true,
         };
       })
   );
 
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts
+    .filter((post) => !post.draft)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 }
 
 export default async function BlogPage(): Promise<JSX.Element> {
@@ -60,7 +64,10 @@ export default async function BlogPage(): Promise<JSX.Element> {
           <article key={slug} className="group">
             <Link href={`/blog/${slug}`} className="block">
               {/* Date */}
-              <time className="text-sm font-medium text-gray-500 dark:text-gray-400" dateTime={date}>
+              <time
+                className="text-sm font-medium text-gray-500 dark:text-gray-400"
+                dateTime={date}
+              >
                 {new Date(date).toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "long",

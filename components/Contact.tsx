@@ -14,7 +14,13 @@ const contactLinks: ContactLink[] = [
     label: "Email",
     description: "hi@brauliodeleon.com",
     icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+      >
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -53,14 +59,18 @@ const contactLinks: ContactLink[] = [
 
 export function Contact(): JSX.Element {
   return (
-    <section id="contact" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
+    <section
+      id="contact"
+      className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 md:py-24"
+    >
       <div className="mx-auto max-w-3xl text-center">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
           Let&apos;s Work Together
         </h2>
         <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300 sm:mt-6 sm:text-xl">
-          I&apos;m always interested in hearing about new projects, opportunities, or just having a
-          conversation about technology. Feel free to reach out!
+          I&apos;m looking for a staff-level, hands-on frontend role with a
+          remote US team. If that sounds like your team, I&apos;d like to hear
+          from you.
         </p>
       </div>
 
@@ -76,15 +86,25 @@ export function Contact(): JSX.Element {
               {icon}
             </div>
             <h3 className="mt-4 text-lg font-semibold">{label}</h3>
-            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">{description}</p>
+            <p className="mt-2 text-sm text-gray-700 dark:text-gray-300">
+              {description}
+            </p>
           </Link>
         ))}
       </div>
 
       <div className="mt-12 text-center sm:mt-16">
         <p className="text-base text-gray-700 dark:text-gray-300">
-          Looking forward to connecting with you and exploring how we can create something amazing
-          together.
+          Prefer the full picture?{" "}
+          <Link
+            href="/braulio-de-leon-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-medium text-brand-primary hover:underline"
+          >
+            Download my CV (PDF)
+          </Link>
+          .
         </p>
       </div>
     </section>

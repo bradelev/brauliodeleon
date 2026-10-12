@@ -20,11 +20,17 @@ type PostPageProps = {
   }>;
 };
 
-async function getPost(slug: string): Promise<{ metadata: PostMetadata; content: string } | null> {
+async function getPost(
+  slug: string
+): Promise<{ metadata: PostMetadata; content: string } | null> {
   try {
     const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`);
     const fileContents = await readFile(filePath, "utf8");
     const { data, content } = matter(fileContents);
+
+    if (data.draft === true) {
+      return null;
+    }
 
     return {
       metadata: {
@@ -41,18 +47,26 @@ async function getPost(slug: string): Promise<{ metadata: PostMetadata; content:
   }
 }
 
+export const dynamicParams = false;
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const postsDirectory = path.join(process.cwd(), "content/blog");
   const filenames = await readdir(postsDirectory);
-
-  return filenames
+  const slugs = filenames
     .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => ({
-      slug: filename.replace(/\.md$/, ""),
-    }));
+    .map((filename) => filename.replace(/\.md$/, ""));
+  const published = await Promise.all(
+    slugs.map(async (slug) => ((await getPost(slug)) ? slug : null))
+  );
+
+  return published
+    .filter((slug): slug is string => slug !== null)
+    .map((slug) => ({ slug }));
 }
 
-export default async function BlogPostPage({ params }: PostPageProps): Promise<JSX.Element> {
+export default async function BlogPostPage({
+  params,
+}: PostPageProps): Promise<JSX.Element> {
   const { slug } = await params;
   const post = await getPost(slug);
 
@@ -76,14 +90,21 @@ export default async function BlogPostPage({ params }: PostPageProps): Promise<J
           strokeWidth={2}
           stroke="currentColor"
         >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+          />
         </svg>
         Back to Blog
       </Link>
 
       {/* Post Header */}
       <header className="mt-12 border-b border-gray-200 pb-10 dark:border-gray-700">
-        <time className="text-sm font-medium text-gray-500 dark:text-gray-400" dateTime={metadata.date}>
+        <time
+          className="text-sm font-medium text-gray-500 dark:text-gray-400"
+          dateTime={metadata.date}
+        >
           {new Date(metadata.date).toLocaleDateString("en-US", {
             year: "numeric",
             month: "long",

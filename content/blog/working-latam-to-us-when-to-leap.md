@@ -2,6 +2,7 @@
 title: "Working from Latin America for US Companies: The Pros, Cons, and When to Make the Leap"
 date: "2026-01-31"
 excerpt: "A comprehensive analysis of remote work from LATAM to the US from both sides of the table: what companies gain and risk, what developers should consider, and the decision framework for knowing when it's time to take the leap."
+draft: true
 author: "Braulio De Leon"
 tags: ["remote-work", "career", "latam", "hiring", "engineering-leadership", "work-culture"]
 ---

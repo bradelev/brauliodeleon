@@ -2,6 +2,7 @@
 title: "Navigating AI Security in 2026: Lessons from OpenClaw and the Prompt Injection Era"
 date: "2026-01-31"
 excerpt: "How do we embrace cutting-edge AI tools like OpenClaw without compromising security? A practical framework for engineering leaders balancing innovation with protection against prompt injection attacks."
+draft: true
 author: "Braulio De Leon"
 tags: ["ai", "security", "prompt-injection", "openclaw", "engineering-leadership", "best-practices"]
 ---

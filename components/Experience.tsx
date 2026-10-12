@@ -115,12 +115,12 @@ export function Experience(): JSX.Element {
             reminder system (confirm or reschedule) used by a local clinic.
           </p>
           <Link
-            href="https://github.com/bradelev/vaig-automation"
+            href="https://github.com/bradelev/vaig-scheduling"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-4 inline-block text-sm font-medium text-brand-primary hover:underline"
           >
-            github.com/bradelev/vaig-automation
+            github.com/bradelev/vaig-scheduling
           </Link>
         </div>
       </div>

@@ -1,62 +1,71 @@
 # brauliodeleon.com
 
-Personal website and blog built with Next.js 14.
+Personal website and blog of **Braulio De Leon**, Staff Frontend Engineer focused on payments, auth and checkout (React · TypeScript).
 
-## Tech Stack
+**Live:** [brauliodeleon.com](https://brauliodeleon.com) · **CV:** [PDF](https://brauliodeleon.com/braulio-de-leon-cv.pdf) · **LinkedIn:** [in/brauliodeleon](https://linkedin.com/in/brauliodeleon)
 
-- **Framework:** Next.js 14 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS
-- **Deployment:** Vercel
+> Looking for my main side project? See [vaig-scheduling](https://github.com/bradelev/vaig-scheduling): scheduling and WhatsApp reminders for a local clinic, built with an agent-driven workflow (Next.js, Supabase, Claude Code).
 
-## Getting Started
+## What this repo shows
 
-Install dependencies:
+A small site, kept deliberately simple. The parts worth looking at:
+
+- **Fully static output.** Every route, including each blog post, is prerendered at build time (`generateStaticParams`). There is no client-side JavaScript beyond what Next.js ships by default, and no runtime data fetching.
+- **Markdown content with drafts.** Posts live in [`content/blog`](content/blog) as Markdown with front matter. Setting `draft: true` removes a post from the index and from the build. Its URL returns 404 because of `dynamicParams = false` ([`app/blog/[slug]/page.tsx`](app/blog/%5Bslug%5D/page.tsx)).
+- **Content as typed data.** Experience, skills and contact links are typed arrays rendered by small components, so updating the CV content doesn't mean editing markup ([`components/Experience.tsx`](components/Experience.tsx)).
+- **Built with AI agents, reviewed by me.** The site was built with Claude Code. [`.claude/skills`](.claude/skills) holds the conventions the agent was asked to follow. Every change goes through a PR with a Vercel preview before merging to `master`.
+
+## Tech stack
+
+| Area | Choice |
+| --- | --- |
+| Framework | Next.js 14 (App Router, React Server Components) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
+| Content | Markdown + `gray-matter`, rendered with `react-markdown` and `remark-gfm` |
+| Hosting | Vercel (preview deploy per PR, production on merge) |
+| Quality | ESLint, Prettier, Dependabot |
+
+## Running locally
+
+Requires Node.js 20+.
 
 ```bash
 npm install
+npm run dev      # http://localhost:3000
+npm run build    # production build (prerenders every page)
+npm run lint
 ```
 
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to see the result.
-
-## Project Structure
+## Project structure
 
 ```
-├── app/              # Next.js app directory
-│   ├── layout.tsx    # Root layout
-│   ├── page.tsx      # Home page
-│   └── globals.css   # Global styles
-├── components/       # React components
-├── lib/              # Utility functions
-└── public/           # Static assets
+app/
+  layout.tsx            # Root layout and site metadata
+  page.tsx              # Home: Hero, About, Experience, Writing, Contact
+  blog/page.tsx         # Blog index (published posts only)
+  blog/[slug]/page.tsx  # Statically generated post pages
+components/             # Server components for each section
+content/blog/           # Markdown posts
+public/                 # Static assets, including the CV PDF
+docs/                   # Deployment, design system and responsive notes
 ```
 
-## Development
+## Writing a post
 
-```bash
-npm run dev      # Start development server
-npm run build    # Build for production
-npm run start    # Start production server
-npm run lint     # Run ESLint
+Add `content/blog/<slug>.md`:
+
+```markdown
+---
+title: "Post title"
+date: "2026-10-12"
+excerpt: "One-sentence summary shown in the index."
+author: "Braulio De Leon"
+tags: ["react", "typescript"]
+draft: true # remove to publish
+---
 ```
 
-## Deployment
+## Contact
 
-This project is configured for deployment on Vercel.
-
-See [docs/deployment.md](docs/deployment.md) for detailed deployment instructions.
-
-**Quick Deploy:**
-1. Push to `main` branch for production deployment
-2. Create PR for preview deployments
-
-## Documentation
-
-- [Brand Strategy](docs/brand-strategy.md) - Brand messaging and positioning
-- [Deployment Guide](docs/deployment.md) - Vercel deployment instructions
+[hi@brauliodeleon.com](mailto:hi@brauliodeleon.com)

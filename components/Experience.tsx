@@ -15,7 +15,7 @@ const roles: Role[] = [
     title: "Senior Frontend Engineer · via Arionkoder",
     period: "Apr 2024 – Oct 2026",
     stack:
-      "React · Next.js · TypeScript · Nx monorepo · OAuth with mTLS · JWE · Contentful · Feature flags",
+      "React · Next.js · TypeScript · Nx monorepo · OAuth / mTLS · JWE · Contentful · Feature flags",
     highlights: [
       "Owned the frontend of 3D Secure card authentication with American Express, a payments-compliance requirement for the Canadian market, delivered end to end with Amex, infrastructure and business analysts. It became the shared foundation for all three lines of business on the platform.",
       "Became the go-to engineer for Amex authentication issues across teams: represented engineering in cross-team delivery syncs with Amex, and made the flow safe for every team to build and test against without weakening production compliance.",

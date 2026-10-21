@@ -2,17 +2,16 @@
 title: "Building a Personal Brand with AI-Powered Automation: From One Prompt to Production"
 date: "2026-01-30"
 excerpt: "How I rebuilt my entire personal website in hours using Claude Code, with automated Jira project management, GitHub integration, and Vercel deployment—all from a single initial prompt."
+draft: true
 author: "Braulio De Leon"
 tags: ["ai", "automation", "claude-code", "nextjs", "devops", "productivity"]
 ---
-
-<!-- # Building a Personal Brand with AI-Powered Automation: From One Prompt to Production -->
 
 ## The Challenge: Building a Personal Brand at Scale
 
 As a Senior Frontend Engineer and Head of Engineering, I had a problem that many technical leaders face: **I had content, experience, and expertise, but no cohesive personal brand presence online.**
 
-I had published articles on LinkedIn about CES 2025 and leadership lessons from cycling. I had 10+ years of experience building enterprise applications for American Express and Toyota. But my personal website? An outdated Angular portfolio from 2020 that didn&apos;t reflect who I am today.
+I had published articles on LinkedIn about CES 2025 and leadership lessons from cycling. I had 15+ years of experience building enterprise applications for American Express and Toyota. But my personal website? An outdated Angular portfolio from 2020 that didn&apos;t reflect who I am today.
 
 The traditional approach would have been:
 1. Plan the site architecture (2-3 hours)

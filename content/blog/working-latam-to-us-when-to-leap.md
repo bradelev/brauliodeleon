@@ -7,8 +7,6 @@ author: "Braulio De Leon"
 tags: ["remote-work", "career", "latam", "hiring", "engineering-leadership", "work-culture"]
 ---
 
-<!-- # Working from Latin America for US Companies: The Pros, Cons, and When to Make the Leap -->
-
 ## The New Geography of Talent
 
 Five years ago, working remotely for a US company from Latin America was still considered "experimental." Today, it's mainstream.

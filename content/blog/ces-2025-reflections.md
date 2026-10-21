@@ -6,8 +6,6 @@ author: "Braulio De Leon"
 tags: ["technology", "innovation", "ces", "emerging-markets", "ai"]
 ---
 
-<!-- # Reflections on CES 2025: Innovation, Gaps, and Shared Responsibility -->
-
 It&apos;s been a few weeks since my participation in CES 2025, an event so vast that I initially felt like a small drop in the midst of a huge ocean of innovation. I&apos;m deeply grateful to Arionkoder, whose support made possible this transformative experience of attending CES 2025 with Bruno Fleischer.
 
 I&apos;d like to share some reflections combining what I observed with what I felt:

@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { readdir, readFile } from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description: "Thoughts on software engineering, leadership, and technology",
+  alternates: { canonical: "/blog" },
+};
 
 type Post = {
   slug: string;

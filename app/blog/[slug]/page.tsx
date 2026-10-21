@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { readFile, readdir } from "fs/promises";
 import path from "path";
 import matter from "gray-matter";
@@ -62,6 +63,38 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return published
     .filter((slug): slug is string => slug !== null)
     .map((slug) => ({ slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: PostPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPost(slug);
+
+  if (!post) {
+    return {};
+  }
+
+  const { title, excerpt, date, author, tags } = post.metadata;
+
+  return {
+    title,
+    description: excerpt,
+    alternates: { canonical: `/blog/${slug}` },
+    openGraph: {
+      type: "article",
+      title,
+      description: excerpt,
+      url: `/blog/${slug}`,
+      publishedTime: date,
+      authors: [author],
+      tags,
+    },
+    twitter: {
+      title,
+      description: excerpt,
+    },
+  };
 }
 
 export default async function BlogPostPage({

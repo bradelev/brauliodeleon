@@ -1,81 +1,33 @@
 import type { Metadata } from "next";
-import { readFile, readdir } from "fs/promises";
-import path from "path";
-import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-
-type PostMetadata = {
-  title: string;
-  date: string;
-  excerpt: string;
-  author: string;
-  tags: string[];
-};
+import { formatDate, getPost, getPosts } from "@/lib/posts";
 
 type PostPageProps = {
-  params: Promise<{
+  params: {
     slug: string;
-  }>;
+  };
 };
-
-async function getPost(
-  slug: string
-): Promise<{ metadata: PostMetadata; content: string } | null> {
-  try {
-    const filePath = path.join(process.cwd(), "content/blog", `${slug}.md`);
-    const fileContents = await readFile(filePath, "utf8");
-    const { data, content } = matter(fileContents);
-
-    if (data.draft === true) {
-      return null;
-    }
-
-    return {
-      metadata: {
-        title: data.title,
-        date: data.date,
-        excerpt: data.excerpt,
-        author: data.author,
-        tags: data.tags || [],
-      },
-      content,
-    };
-  } catch {
-    return null;
-  }
-}
 
 export const dynamicParams = false;
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
-  const postsDirectory = path.join(process.cwd(), "content/blog");
-  const filenames = await readdir(postsDirectory);
-  const slugs = filenames
-    .filter((filename) => filename.endsWith(".md"))
-    .map((filename) => filename.replace(/\.md$/, ""));
-  const published = await Promise.all(
-    slugs.map(async (slug) => ((await getPost(slug)) ? slug : null))
-  );
-
-  return published
-    .filter((slug): slug is string => slug !== null)
-    .map((slug) => ({ slug }));
+  const posts = await getPosts();
+  return posts.map(({ slug }) => ({ slug }));
 }
 
 export async function generateMetadata({
-  params,
+  params: { slug },
 }: PostPageProps): Promise<Metadata> {
-  const { slug } = await params;
   const post = await getPost(slug);
 
   if (!post) {
     return {};
   }
 
-  const { title, excerpt, date, author, tags } = post.metadata;
+  const { title, excerpt, date, author, tags } = post;
 
   return {
     title,
@@ -89,6 +41,8 @@ export async function generateMetadata({
       publishedTime: date,
       authors: [author],
       tags,
+      // A page-level openGraph replaces the root one, image included
+      images: ["/opengraph-image"],
     },
     twitter: {
       title,
@@ -98,16 +52,15 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({
-  params,
+  params: { slug },
 }: PostPageProps): Promise<JSX.Element> {
-  const { slug } = await params;
   const post = await getPost(slug);
 
   if (!post) {
     notFound();
   }
 
-  const { metadata, content } = post;
+  const { content, ...metadata } = post;
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
@@ -138,11 +91,7 @@ export default async function BlogPostPage({
           className="text-sm font-medium text-gray-500 dark:text-gray-400"
           dateTime={metadata.date}
         >
-          {new Date(metadata.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
+          {formatDate(metadata.date)}
         </time>
 
         <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
@@ -170,7 +119,7 @@ export default async function BlogPostPage({
       </header>
 
       {/* Post Content */}
-      <div className="prose prose-lg prose-gray mt-12 max-w-none dark:prose-invert">
+      <div className="prose mt-12">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </div>
     </article>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,7 +12,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://brauliodeleon.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Braulio De Leon - Senior / Staff Frontend Engineer",
     template: "%s | Braulio De Leon",
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://brauliodeleon.com",
+    url: "/",
     title: "Braulio De Leon - Senior / Staff Frontend Engineer",
     description:
       "Senior / Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
@@ -55,8 +56,16 @@ export default function RootLayout({ children }: RootLayoutProps): JSX.Element {
   return (
     <html lang="en" className={inter.variable}>
       <body className="flex min-h-screen flex-col font-sans">
+        <a
+          href="#content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:shadow-lg"
+        >
+          Skip to content
+        </a>
         <Header />
-        <main className="flex-1">{children}</main>
+        <main id="content" className="flex-1">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

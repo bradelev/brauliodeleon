@@ -11,7 +11,7 @@ tags: ["ai", "automation", "claude-code", "nextjs", "devops", "productivity"]
 
 As a Senior Frontend Engineer and Head of Engineering, I had a problem that many technical leaders face: **I had content, experience, and expertise, but no cohesive personal brand presence online.**
 
-I had published articles on LinkedIn about CES 2025 and leadership lessons from cycling. I had 15+ years of experience building enterprise applications for American Express and Toyota. But my personal website? An outdated Angular portfolio from 2020 that didn&apos;t reflect who I am today.
+I had published articles on LinkedIn about CES 2025 and leadership lessons from cycling. I had 15+ years of experience building enterprise applications for American Express and Toyota. But my personal website? An outdated Angular portfolio from 2020 that didn't reflect who I am today.
 
 The traditional approach would have been:
 1. Plan the site architecture (2-3 hours)
@@ -31,13 +31,13 @@ On January 30, 2026, I opened Claude Code and typed a single prompt:
 
 > "quiero que evalues el sitio brauliodeleon.com. quiero mejorarlo. tengo un articulo y un post en linkedin, pero no tengo marca personal"
 
-That&apos;s it. Twenty-one words in Spanish. No detailed specifications. No wireframes. No technical requirements.
+That's it. Twenty-one words in Spanish. No detailed specifications. No wireframes. No technical requirements.
 
 What happened next changed how I think about AI-assisted development.
 
 ## The Magic: Automated Project Planning
 
-Claude Code didn&apos;t just give me suggestions. It **took action**.
+Claude Code didn't just give me suggestions. It **took action**.
 
 Within seconds, it:
 
@@ -69,7 +69,7 @@ Each issue had:
 
 ## The Workflow: Full Automation in Action
 
-Here&apos;s where it gets interesting. Claude Code didn&apos;t just create the issues—it **executed the entire project autonomously**.
+Here's where it gets interesting. Claude Code didn't just create the issues—it **executed the entire project autonomously**.
 
 ### Phase 1: Project Initialization (BDW-9 to BDW-14)
 
@@ -128,11 +128,11 @@ When I reported that all links were returning 404s, Claude Code:
 4. **Tested the fix**: Ran `npm run build` to verify
 5. **Committed and deployed**: Pushed to GitHub with proper issue reference
 
-It didn&apos;t ask for permission. It didn&apos;t wait for instructions. It **saw a problem, created a task, fixed it, and moved on**.
+It didn't ask for permission. It didn't wait for instructions. It **saw a problem, created a task, fixed it, and moved on**.
 
 ## The Integration: Connecting the Ecosystem
 
-What makes this workflow powerful isn&apos;t just the code—it&apos;s the **seamless integration of tools**:
+What makes this workflow powerful isn't just the code—it's the **seamless integration of tools**:
 
 ### Jira Integration
 - Automatic issue creation via REST API
@@ -168,7 +168,7 @@ These skills acted as **living documentation** that guided every decision.
 - **AI-powered approach**: ~3 hours in a single session
 - **Time saved**: 80% reduction
 
-But that&apos;s not the real story.
+But that's not the real story.
 
 ### Quality Improvements
 
@@ -189,12 +189,12 @@ More importantly, the **workflow is now replicable**:
 - Every deployment is automatic
 - Every task is documented
 
-This isn&apos;t just about building one website faster. It&apos;s about creating a **scalable, automated development process**.
+This isn't just about building one website faster. It's about creating a **scalable, automated development process**.
 
 ## The Innovation: What Makes This Different
 
 ### 1. Autonomous Execution
-Claude Code doesn&apos;t just suggest—it **executes**. It:
+Claude Code doesn't just suggest—it **executes**. It:
 - Runs commands
 - Makes API calls
 - Creates files
@@ -215,7 +215,7 @@ Instead of treating tools as separate:
 - Claude Code orchestrates everything
 
 ### 4. Living Best Practices
-AI skills aren&apos;t static docs—they&apos;re **enforced patterns**:
+AI skills aren't static docs—they're **enforced patterns**:
 - Every component follows the same structure
 - Every commit follows the same format
 - Every deployment follows the same process
@@ -243,7 +243,7 @@ Because the cost of iteration is so low, I could:
 - Improve continuously
 
 ### 4. Documentation Happens Automatically
-I didn&apos;t write a single README or project plan. It all emerged from:
+I didn't write a single README or project plan. It all emerged from:
 - Jira issue descriptions
 - Git commit messages
 - Code comments
@@ -251,7 +251,7 @@ I didn&apos;t write a single README or project plan. It all emerged from:
 
 ## The Future: Where This Is Going
 
-This experiment revealed something profound: **AI doesn&apos;t replace developers—it amplifies their leverage**.
+This experiment revealed something profound: **AI doesn't replace developers—it amplifies their leverage**.
 
 With this workflow, I can now:
 
@@ -263,7 +263,7 @@ With this workflow, I can now:
 
 ### Immediate Next Steps
 
-I&apos;m already using this approach for:
+I'm already using this approach for:
 - Blog post automation (convert LinkedIn posts to markdown)
 - Feature development (new sections, components)
 - Bug fixes (BDW-34 theme toggle fix)
@@ -303,9 +303,9 @@ Notable aspects:
 
 ## Conclusion: The Real Innovation
 
-The real innovation isn&apos;t the technology—it&apos;s the **paradigm shift**.
+The real innovation isn't the technology—it's the **paradigm shift**.
 
-We&apos;ve moved from:
+We've moved from:
 - **Code generation** → **Workflow automation**
 - **AI suggestions** → **Autonomous execution**
 - **Static documentation** → **Living best practices**
@@ -319,7 +319,7 @@ The website took 3 hours to build.
 
 The workflow I discovered will save me hundreds of hours over the coming years.
 
-That&apos;s the real value of AI-powered automation.
+That's the real value of AI-powered automation.
 
 ---
 

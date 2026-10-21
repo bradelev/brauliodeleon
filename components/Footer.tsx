@@ -8,7 +8,11 @@ type SocialLink = {
 
 const socialLinks: SocialLink[] = [
   { href: "https://github.com/bradelev", label: "GitHub", external: true },
-  { href: "https://linkedin.com/in/brauliodeleon", label: "LinkedIn", external: true },
+  {
+    href: "https://linkedin.com/in/brauliodeleon",
+    label: "LinkedIn",
+    external: true,
+  },
   { href: "mailto:hi@brauliodeleon.com", label: "Email" },
 ];
 
@@ -27,7 +31,10 @@ export function Footer(): JSX.Element {
               <Link
                 key={href}
                 href={href}
-                {...(external && { target: "_blank", rel: "noopener noreferrer" })}
+                {...(external && {
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                })}
                 className="text-sm text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100"
               >
                 {label}

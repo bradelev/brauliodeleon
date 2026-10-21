@@ -3,16 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  /* RGB channels, consumed by tailwind.config.ts */
   :root {
-    /* Light mode colors */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    color-scheme: light dark;
+    --background: 255 255 255; /* white */
+    --background-secondary: 249 250 251; /* gray-50 */
+    --foreground: 15 23 42; /* slate-900 */
+    --border: 226 232 240; /* slate-200 */
+    --brand-primary: 37 99 235; /* blue-600 */
+    --brand-hover: 29 78 216; /* blue-700 */
+    --brand-on: 255 255 255;
   }
 
-  .dark {
-    /* Dark mode colors */
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background: 3 7 18; /* gray-950 */
+      --background-secondary: 17 24 39; /* gray-900 */
+      --foreground: 243 244 246; /* gray-100 */
+      --border: 55 65 81; /* gray-700 */
+      --brand-primary: 96 165 250; /* blue-400 */
+      --brand-hover: 147 197 253; /* blue-300 */
+      --brand-on: 3 7 18;
+    }
   }
 
   * {
@@ -50,6 +62,19 @@
 
   p {
     @apply leading-7;
+  }
+
+  :focus-visible {
+    @apply rounded-sm outline outline-2 outline-offset-2 outline-brand-primary;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -119,7 +144,7 @@
   }
 
   .prose code {
-    @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm text-gray-900 before:content-none after:content-none dark:bg-gray-800 dark:text-gray-100;
+    @apply rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm text-gray-900 dark:bg-gray-800 dark:text-gray-100;
   }
 
   .prose pre {

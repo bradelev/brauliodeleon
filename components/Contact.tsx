@@ -82,7 +82,7 @@ export function Contact(): JSX.Element {
             {...(external && { target: "_blank", rel: "noopener noreferrer" })}
             className="group flex flex-col items-center rounded-lg border border-gray-200 bg-white p-6 text-center transition-all hover:border-brand-primary hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 dark:hover:border-brand-primary sm:p-8"
           >
-            <div className="inline-flex rounded-lg bg-brand-primary p-3 text-white transition-transform group-hover:scale-110">
+            <div className="inline-flex rounded-lg bg-brand-primary p-3 text-brand-on transition-transform group-hover:scale-110">
               {icon}
             </div>
             <h3 className="mt-4 text-lg font-semibold">{label}</h3>

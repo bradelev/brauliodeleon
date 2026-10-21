@@ -7,8 +7,6 @@ author: "Braulio De Leon"
 tags: ["ai", "security", "prompt-injection", "openclaw", "engineering-leadership", "best-practices"]
 ---
 
-<!-- # Navigating AI Security in 2026: Lessons from OpenClaw and the Prompt Injection Era -->
-
 ## The Paradox of AI Innovation
 
 As a Head of Engineering, I face a daily paradox: **the tools that make us most productive are also the ones that introduce the most risk**.

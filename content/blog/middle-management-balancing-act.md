@@ -7,8 +7,6 @@ author: "Braulio De Leon"
 tags: ["engineering-leadership", "management", "team-motivation", "career", "leadership"]
 ---
 
-<!-- # The Middle Management Balancing Act: Power, Visibility, and Keeping Teams Motivated -->
-
 ## The Uncomfortable Truth About Middle Management
 
 Let me start with something nobody tells you when you accept that "Head of Engineering" or "Engineering Manager" title:

@@ -10,16 +10,9 @@ type Post = {
 
 const featuredPosts: Post[] = [
   {
-    slug: "building-with-ai-automation",
-    title: "Building a Personal Brand with AI-Powered Automation: From One Prompt to Production",
-    excerpt:
-      "How I rebuilt my entire personal website in hours using Claude Code, with automated Jira project management, GitHub integration, and Vercel deployment—all from a single initial prompt.",
-    date: "2026-01-30",
-    tags: ["ai", "automation", "claude-code", "nextjs", "devops", "productivity"],
-  },
-  {
     slug: "ces-2025-reflections",
-    title: "Reflections on CES 2025: Innovation, Gaps, and Shared Responsibility",
+    title:
+      "Reflections on CES 2025: Innovation, Gaps, and Shared Responsibility",
     excerpt:
       "My observations from CES 2025 on technological innovation, market accessibility, labor reconversion, and the responsibility of both industry and emerging regions.",
     date: "2025-01-28",
@@ -51,61 +44,65 @@ export function FeaturedPosts(): JSX.Element {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 sm:mt-16 md:grid-cols-2 lg:grid-cols-3">
-          {featuredPosts.map(({ slug, title, excerpt, date, tags }) => (
-            <Link
-              key={slug}
-              href={`/blog/${slug}`}
-              className="group flex flex-col rounded-lg border border-gray-200 bg-white p-6 transition-all hover:border-brand-primary hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 dark:hover:border-brand-primary"
-            >
-              <div className="flex-1">
-                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-                  <time dateTime={date}>
-                    {new Date(date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </time>
+          {[...featuredPosts]
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map(({ slug, title, excerpt, date, tags }) => (
+              <Link
+                key={slug}
+                href={`/blog/${slug}`}
+                className="group flex flex-col rounded-lg border border-gray-200 bg-white p-6 transition-all hover:border-brand-primary hover:shadow-lg dark:border-gray-700 dark:bg-gray-800 dark:hover:border-brand-primary"
+              >
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
+                    <time dateTime={date}>
+                      {new Date(date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </time>
+                  </div>
+
+                  <h3 className="mt-4 text-xl font-semibold leading-tight transition-colors group-hover:text-brand-primary">
+                    {title}
+                  </h3>
+
+                  <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
+                    {excerpt}
+                  </p>
                 </div>
 
-                <h3 className="mt-4 text-xl font-semibold leading-tight transition-colors group-hover:text-brand-primary">
-                  {title}
-                </h3>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {tags.slice(0, 3).map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
 
-                <p className="mt-3 text-sm leading-relaxed text-gray-700 dark:text-gray-300">
-                  {excerpt}
-                </p>
-              </div>
-
-              <div className="mt-6 flex flex-wrap gap-2">
-                {tags.slice(0, 3).map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                <div className="mt-6 flex items-center text-sm font-medium text-brand-primary">
+                  Read more
+                  <svg
+                    className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
                   >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className="mt-6 flex items-center text-sm font-medium text-brand-primary">
-                Read more
-                <svg
-                  className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </div>
-            </Link>
-          ))}
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                  </svg>
+                </div>
+              </Link>
+            ))}
         </div>
 
         <div className="mt-12 text-center">

@@ -13,13 +13,14 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://brauliodeleon.com"),
   title: {
-    default: "Braulio De Leon - Staff Frontend Engineer",
+    default: "Braulio De Leon - Senior / Staff Frontend Engineer",
     template: "%s | Braulio De Leon",
   },
   description:
-    "Staff Frontend Engineer focused on payments, auth and checkout. 15+ years building enterprise frontends in React and TypeScript for US companies, including American Express and Toyota.",
+    "Senior / Staff Frontend Engineer focused on payments, auth and checkout. 15+ years building enterprise frontends in React and TypeScript for US companies, including American Express and Toyota.",
   keywords: [
     "staff frontend engineer",
+    "senior frontend engineer",
     "react",
     "typescript",
     "nextjs",
@@ -33,16 +34,16 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://brauliodeleon.com",
-    title: "Braulio De Leon - Staff Frontend Engineer",
+    title: "Braulio De Leon - Senior / Staff Frontend Engineer",
     description:
-      "Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
+      "Senior / Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
     siteName: "Braulio De Leon",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Braulio De Leon - Staff Frontend Engineer",
+    title: "Braulio De Leon - Senior / Staff Frontend Engineer",
     description:
-      "Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
+      "Senior / Staff Frontend Engineer · Payments, Auth & Checkout · React · TypeScript",
   },
 };
 

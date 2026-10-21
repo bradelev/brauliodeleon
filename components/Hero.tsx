@@ -65,8 +65,8 @@ export function Hero(): JSX.Element {
         {/* Title & Location */}
         <div className="mt-4 space-y-1 sm:mt-6">
           <p className="text-lg font-medium text-gray-900 dark:text-gray-100 sm:text-xl">
-            Staff Frontend Engineer · Payments, Auth &amp; Checkout · React ·
-            TypeScript
+            Senior / Staff Frontend Engineer · Payments, Auth &amp; Checkout ·
+            React · TypeScript
           </p>
           <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
             📍 Montevideo, Uruguay · Remote (US time zones)

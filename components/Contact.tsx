@@ -68,9 +68,9 @@ export function Contact(): JSX.Element {
           Let&apos;s Work Together
         </h2>
         <p className="mt-4 text-lg leading-relaxed text-gray-700 dark:text-gray-300 sm:mt-6 sm:text-xl">
-          I&apos;m looking for a staff-level, hands-on frontend role with a
-          remote US team. If that sounds like your team, I&apos;d like to hear
-          from you.
+          I&apos;m looking for a senior or staff-level, hands-on frontend role
+          with a remote US team. If that sounds like your team, I&apos;d like to
+          hear from you.
         </p>
       </div>
 

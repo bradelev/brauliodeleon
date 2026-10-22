@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function Home(): JSX.Element {
   return (
-    <>
+    <div className="mx-auto max-w-5xl px-6">
       <Hero />
       <About />
       <Experience />
       <FeaturedPosts />
       <Contact />
-    </>
+    </div>
   );
 }

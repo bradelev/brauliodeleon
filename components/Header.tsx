@@ -1,33 +1,36 @@
 import Link from "next/link";
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
+  { href: "/#experience", label: "work" },
+  { href: "/blog", label: "writing" },
+  { href: "/braulio-de-leon-cv.pdf", label: "cv.pdf" },
 ] as const;
 
 export function Header(): JSX.Element {
   return (
-    <header className="border-b border-gray-200 dark:border-gray-800">
-      <nav aria-label="Main" className="mx-auto max-w-5xl px-4 py-4 sm:px-6">
-        <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-base font-bold transition-colors hover:text-gray-600 dark:hover:text-gray-300 sm:text-xl"
-          >
-            Braulio De Leon
-          </Link>
-          <div className="-mr-2 flex items-center gap-1 sm:gap-2">
-            {navLinks.map(({ href, label }) => (
+    <header className="mx-auto w-full max-w-5xl px-6">
+      <nav
+        aria-label="Main"
+        className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-border py-5"
+      >
+        <Link
+          href="/"
+          className="font-semibold transition-colors hover:text-accent"
+        >
+          Braulio De Leon
+        </Link>
+        <ul className="-mx-2 flex items-center font-mono text-sm">
+          {navLinks.map(({ href, label }) => (
+            <li key={href}>
               <Link
-                key={href}
                 href={href}
-                className="px-2 py-2 text-sm font-medium transition-colors hover:text-gray-600 dark:hover:text-gray-300"
+                className="block px-2 py-2.5 text-muted transition-colors hover:text-accent"
               >
                 {label}
               </Link>
-            ))}
-          </div>
-        </div>
+            </li>
+          ))}
+        </ul>
       </nav>
     </header>
   );

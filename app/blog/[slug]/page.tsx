@@ -63,63 +63,36 @@ export default async function BlogPostPage({
   const { content, ...metadata } = post;
 
   return (
-    <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
-      {/* Back Link */}
+    <article className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
       <Link
         href="/blog"
-        className="group inline-flex items-center gap-2 text-sm font-medium text-gray-600 transition-colors hover:text-brand-primary dark:text-gray-400 dark:hover:text-brand-primary"
+        className="-my-2 inline-block py-2 font-mono text-sm text-muted transition-colors hover:text-accent"
       >
-        <svg
-          className="h-4 w-4 transition-transform group-hover:-translate-x-1"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={2}
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-          />
-        </svg>
-        Back to Blog
+        ← writing
       </Link>
 
-      {/* Post Header */}
-      <header className="mt-12 border-b border-gray-200 pb-10 dark:border-gray-700">
-        <time
-          className="text-sm font-medium text-gray-500 dark:text-gray-400"
-          dateTime={metadata.date}
-        >
-          {formatDate(metadata.date)}
-        </time>
-
-        <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+      <header className="mt-10 max-w-2xl border-b border-border pb-10">
+        <p className="font-mono text-[0.8125rem] text-subtle">
+          <time dateTime={metadata.date}>{formatDate(metadata.date)}</time>
+          {" · "}
+          {metadata.author}
+        </p>
+        <h1 className="mt-4 text-3xl font-semibold leading-tight tracking-tight sm:text-[2.5rem]">
           {metadata.title}
         </h1>
-
-        <p className="mt-6 text-xl leading-relaxed text-gray-700 dark:text-gray-300">
+        <p className="mt-5 text-lg leading-relaxed text-muted sm:text-xl">
           {metadata.excerpt}
         </p>
-
-        <div className="mt-8 flex flex-wrap gap-2">
-          {metadata.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-gray-100 px-3 py-1.5 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-6 text-sm text-gray-700 dark:text-gray-300">
-          By <span className="font-medium">{metadata.author}</span>
-        </div>
+        {metadata.tags.length > 0 && (
+          <ul className="mt-6 flex flex-wrap gap-x-4 gap-y-1 font-mono text-[0.8125rem] text-subtle">
+            {metadata.tags.map((tag) => (
+              <li key={tag}>#{tag}</li>
+            ))}
+          </ul>
+        )}
       </header>
 
-      {/* Post Content */}
-      <div className="prose mt-12">
+      <div className="prose mt-10 max-w-2xl">
         <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
       </div>
     </article>

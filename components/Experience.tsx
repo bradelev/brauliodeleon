@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Section } from "@/components/Section";
 
 type Role = {
   company: string;
@@ -61,81 +61,68 @@ const roles: Role[] = [
 
 export function Experience(): JSX.Element {
   return (
-    <section
-      id="experience"
-      className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 md:py-24"
-    >
-      <div className="mx-auto max-w-3xl">
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-          Experience
-        </h2>
-
-        <ol className="mt-12 space-y-12">
+    <>
+      <Section id="experience" label="Experience">
+        <ol className="space-y-12">
           {roles.map(
             ({ company, title, previousTitle, period, stack, highlights }) => (
-              <li key={`${company}-${period}`}>
-                <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between">
-                  <h3 className="text-xl font-semibold">{company}</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {period}
-                  </p>
-                </div>
-                <p className="mt-1 font-medium text-gray-900 dark:text-gray-100">
-                  {title}
+              <li
+                key={`${company}-${period}`}
+                className="flex flex-col gap-2 lg:flex-row lg:gap-8"
+              >
+                <p className="shrink-0 pt-0.5 font-mono text-[0.8125rem] text-subtle lg:w-40">
+                  {period}
                 </p>
-                {previousTitle && (
-                  <p className="mt-1 font-medium text-gray-900 dark:text-gray-100">
-                    {previousTitle}
-                  </p>
-                )}
-                {stack && (
-                  <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-                    {stack}
-                  </p>
-                )}
-                <ul className="mt-4 list-disc space-y-2 pl-5 text-base leading-relaxed text-gray-700 dark:text-gray-300">
-                  {highlights.map((highlight) => (
-                    <li key={highlight}>{highlight}</li>
-                  ))}
-                </ul>
+                <div className="min-w-0 flex-1">
+                  <h3 className="text-lg font-semibold">{company}</h3>
+                  <p className="mt-0.5 text-muted">{title}</p>
+                  {previousTitle && (
+                    <p className="mt-0.5 text-muted">{previousTitle}</p>
+                  )}
+                  <ul className="mt-4 list-disc space-y-2 pl-5 leading-relaxed text-muted marker:text-subtle">
+                    {highlights.map((highlight) => (
+                      <li key={highlight}>{highlight}</li>
+                    ))}
+                  </ul>
+                  {stack && (
+                    <p className="mt-4 font-mono text-[0.8125rem] leading-relaxed text-subtle">
+                      {stack}
+                    </p>
+                  )}
+                </div>
               </li>
             )
           )}
         </ol>
 
-        <p className="mt-12 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-12 text-[0.9375rem] text-muted lg:ml-48">
           Earlier: Full Stack Engineer at BROS (2017–2018) and EDU Editorial
           (2014–2016); independent developer (2009–2014).
         </p>
+      </Section>
 
-        {/* Side project */}
-        <div className="mt-12 rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800 sm:p-8">
-          <p className="text-sm font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">
-            Side project
-          </p>
-          <h3 className="mt-2 text-xl font-semibold">
-            Agent-driven development workflow
-          </h3>
-          <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">
-            Next.js · Supabase / PostgreSQL · WhatsApp Business API · Claude
-            Code
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-gray-700 dark:text-gray-300">
-            A small project to test an end-to-end AI-agent workflow on a real
-            use case: I wrote the PRDs and architecture and reviewed the output;
-            Claude Code agents implemented it. The result is a simple WhatsApp
-            reminder system (confirm or reschedule) used by a local clinic.
-          </p>
-          <Link
-            href="https://github.com/bradelev/vaig-scheduling"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-block text-sm font-medium text-brand-primary hover:underline"
-          >
-            github.com/bradelev/vaig-scheduling
-          </Link>
-        </div>
-      </div>
-    </section>
+      <Section id="side-project" label="Side project">
+        <h3 className="text-lg font-semibold">
+          Agent-driven development workflow
+        </h3>
+        <p className="mt-4 max-w-2xl leading-relaxed text-muted">
+          A small project to test an end-to-end AI-agent workflow on a real use
+          case: I wrote the PRDs and architecture and reviewed the output;
+          Claude Code agents implemented it. The result is a simple WhatsApp
+          reminder system (confirm or reschedule) used by a local clinic.
+        </p>
+        <p className="mt-4 font-mono text-[0.8125rem] leading-relaxed text-subtle">
+          Next.js · Supabase / PostgreSQL · WhatsApp Business API · Claude Code
+        </p>
+        <a
+          href="https://github.com/bradelev/vaig-scheduling"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-block py-2 font-mono text-[0.9375rem] link"
+        >
+          github.com/bradelev/vaig-scheduling ↗
+        </a>
+      </Section>
+    </>
   );
 }

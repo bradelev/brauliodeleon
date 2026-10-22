@@ -6,15 +6,15 @@ author: "Braulio De Leon"
 tags: ["technology", "innovation", "ces", "emerging-markets", "ai"]
 ---
 
-It&apos;s been a few weeks since my participation in CES 2025, an event so vast that I initially felt like a small drop in the midst of a huge ocean of innovation. I&apos;m deeply grateful to Arionkoder, whose support made possible this transformative experience of attending CES 2025 with Bruno Fleischer.
+It's been a few weeks since my participation in CES 2025, an event so vast that I initially felt like a small drop in the midst of a huge ocean of innovation. I'm deeply grateful to Arionkoder, whose support made possible this transformative experience of attending CES 2025 with Bruno Fleischer.
 
-I&apos;d like to share some reflections combining what I observed with what I felt:
+I'd like to share some reflections combining what I observed with what I felt:
 
 ---
 
 ## 1. The Potential of Technology… and Its Immediate Limits
 
-CES always dazzles with prototypes and launches that seem straight out of science fiction. However, the question remains whether these innovations are truly accessible to most people or if, at least in the early stages, they remain aimed at an elite of consumers in highly developed markets. It&apos;s no secret that in their initial phase, many technologies tend to focus on those with greater resources.
+CES always dazzles with prototypes and launches that seem straight out of science fiction. However, the question remains whether these innovations are truly accessible to most people or if, at least in the early stages, they remain aimed at an elite of consumers in highly developed markets. It's no secret that in their initial phase, many technologies tend to focus on those with greater resources.
 
 **Why is this relevant?**
 
@@ -25,7 +25,7 @@ CES always dazzles with prototypes and launches that seem straight out of scienc
 
 ## 2. Massive Automation or Labor Reconversion?
 
-One of the most memorable moments was NVIDIA&apos;s keynote, showcasing surprising examples of Artificial Intelligence, such as AI Agents and Physical AI (digital twins) for robotics or autonomous driving tests. These tools promise to optimize processes and reduce risks, but inevitably raise a question:
+One of the most memorable moments was NVIDIA's keynote, showcasing surprising examples of Artificial Intelligence, such as AI Agents and Physical AI (digital twins) for robotics or autonomous driving tests. These tools promise to optimize processes and reduce risks, but inevitably raise a question:
 
 > How will we tackle the reconversion of roles and skills?
 
@@ -50,11 +50,11 @@ In an increasingly interconnected world, both the global industry and emerging r
 
 ## 4. Inspiring Cases: Technology as a Tool for Well-Being
 
-Despite the clear orientation toward large ecosystems and big budgets, I found some proposals that reminded me of technology&apos;s more human and inclusive side. For instance:
+Despite the clear orientation toward large ecosystems and big budgets, I found some proposals that reminded me of technology's more human and inclusive side. For instance:
 
 - **Flint:** Paper batteries, winners of the Best of CES Sustainability award, offering a more eco-friendly and accessible alternative to lithium-ion.
 - **MindMics:** Earbuds capable of monitoring cardiac health with greater precision than a conventional smartwatch.
-- **Readyland, LLC:** Children&apos;s books linked to voice assistants (Alexa) to encourage reading habits among the youngest audiences.
+- **Readyland, LLC:** Children's books linked to voice assistants (Alexa) to encourage reading habits among the youngest audiences.
 - **PreEvnt:** A device (Isaac) that measures blood glucose through breathing, eliminating the need for needles.
 - **MoveR:** A French augmented reality platform for treating cognitive disorders such as dyslexia.
 
@@ -64,13 +64,13 @@ These projects may not top the "most talked-about" lists, but they aim to addres
 
 ## 5. Balancing Skepticism and Optimism
 
-CES 2025 left me with mixed feelings. On one hand, the rapid pace of technological development and AI solutions thrills me: I see a future where many repetitive or dangerous tasks are automated, and where entirely new services emerge. On the other, I&apos;m concerned about how prepared — or unprepared — we are to include emerging markets and workers who might be affected.
+CES 2025 left me with mixed feelings. On one hand, the rapid pace of technological development and AI solutions thrills me: I see a future where many repetitive or dangerous tasks are automated, and where entirely new services emerge. On the other, I'm concerned about how prepared — or unprepared — we are to include emerging markets and workers who might be affected.
 
 **My main takeaways are:**
 
 - **Market diversification:** Companies looking to scale globally will have to explore business models that include traditionally underserved countries and segments. Meanwhile, emerging economies themselves should push for greater representation on international stages.
-- **Training and labor adaptation:** Reconversion is not just a social challenge; it&apos;s also a business necessity to ensure access to skilled talent.
-- **Innovation with real impact:** Beyond novelty, solutions that solve specific problems can open doors to massive markets and improve many people&apos;s quality of life.
+- **Training and labor adaptation:** Reconversion is not just a social challenge; it's also a business necessity to ensure access to skilled talent.
+- **Innovation with real impact:** Beyond novelty, solutions that solve specific problems can open doors to massive markets and improve many people's quality of life.
 
 ---
 
@@ -78,10 +78,10 @@ CES 2025 left me with mixed feelings. On one hand, the rapid pace of technologic
 
 The big question on my mind is: **How can we align commercial interests with the need to include more people and regions in this accelerated transformation?** Every company, government, and educational institution will have to find its role in this ecosystem.
 
-What I am convinced of is that technology is only as valuable as the responsible use we give it. That&apos;s why I believe it&apos;s crucial to keep the dialogue going, share findings, and, above all, promote solutions that allow more players to join in rather than fragment the landscape further.
+What I am convinced of is that technology is only as valuable as the responsible use we give it. That's why I believe it's crucial to keep the dialogue going, share findings, and, above all, promote solutions that allow more players to join in rather than fragment the landscape further.
 
 ---
 
 *What strategies do you consider key for bringing technological innovation to more sectors and regions, especially from emerging countries?*
 
-I&apos;d love to continue this conversation and hear other viewpoints. In the end, the advances we saw at CES are just a glimpse of what&apos;s coming, and together we can help create an environment where technology isn&apos;t a luxury but a driver of shared growth and well-being.
+I'd love to continue this conversation and hear other viewpoints. In the end, the advances we saw at CES are just a glimpse of what's coming, and together we can help create an environment where technology isn't a luxury but a driver of shared growth and well-being.

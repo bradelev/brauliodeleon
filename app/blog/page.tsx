@@ -1,54 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { readdir, readFile } from "fs/promises";
-import path from "path";
-import matter from "gray-matter";
+import { formatDate, getPosts } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog",
   description: "Thoughts on software engineering, leadership, and technology",
   alternates: { canonical: "/blog" },
 };
-
-type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  tags: string[];
-  author: string;
-  draft: boolean;
-};
-
-async function getPosts(): Promise<Post[]> {
-  const postsDirectory = path.join(process.cwd(), "content/blog");
-  const filenames = await readdir(postsDirectory);
-
-  const posts = await Promise.all(
-    filenames
-      .filter((filename) => filename.endsWith(".md"))
-      .map(async (filename) => {
-        const slug = filename.replace(/\.md$/, "");
-        const filePath = path.join(postsDirectory, filename);
-        const fileContents = await readFile(filePath, "utf8");
-        const { data } = matter(fileContents);
-
-        return {
-          slug,
-          title: data.title,
-          excerpt: data.excerpt,
-          date: data.date,
-          tags: data.tags || [],
-          author: data.author,
-          draft: data.draft === true,
-        };
-      })
-  );
-
-  return posts
-    .filter((post) => !post.draft)
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-}
 
 export default async function BlogPage(): Promise<JSX.Element> {
   const posts = await getPosts();
@@ -75,11 +33,7 @@ export default async function BlogPage(): Promise<JSX.Element> {
                 className="text-sm font-medium text-gray-500 dark:text-gray-400"
                 dateTime={date}
               >
-                {new Date(date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {formatDate(date)}
               </time>
 
               {/* Title */}

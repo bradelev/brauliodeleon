@@ -22,7 +22,7 @@ const skillGroups: SkillGroup[] = [
 
 export function About(): JSX.Element {
   return (
-    <section id="about" className="bg-background-secondary dark:bg-gray-900">
+    <section id="about" className="bg-background-secondary">
       <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 sm:py-20 md:py-24">
         <div className="mx-auto max-w-3xl">
           {/* Section Header */}

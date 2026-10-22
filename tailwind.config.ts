@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  darkMode: "media",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,28 +9,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Values live in app/globals.css so they can switch with the color scheme
       colors: {
-        // Brand colors
         brand: {
-          primary: "#2563eb", // blue-600
-          secondary: "#7c3aed", // violet-600
-          accent: "#0891b2", // cyan-600
+          primary: "rgb(var(--brand-primary) / <alpha-value>)",
+          hover: "rgb(var(--brand-hover) / <alpha-value>)",
+          // Text and icons drawn on top of a brand-primary fill
+          on: "rgb(var(--brand-on) / <alpha-value>)",
         },
-        // Semantic colors
         background: {
-          DEFAULT: "#ffffff",
-          secondary: "#f9fafb", // gray-50
-          tertiary: "#f3f4f6", // gray-100
+          DEFAULT: "rgb(var(--background) / <alpha-value>)",
+          secondary: "rgb(var(--background-secondary) / <alpha-value>)",
         },
-        foreground: {
-          DEFAULT: "#0f172a", // slate-900
-          secondary: "#475569", // slate-600
-          tertiary: "#94a3b8", // slate-400
-        },
-        border: {
-          DEFAULT: "#e2e8f0", // slate-200
-          secondary: "#cbd5e1", // slate-300
-        },
+        foreground: "rgb(var(--foreground) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],

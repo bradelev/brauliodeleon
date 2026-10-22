@@ -11,7 +11,7 @@ Personal website and blog of **Braulio De Leon**, Staff Frontend Engineer focuse
 A small site, kept deliberately simple. The parts worth looking at:
 
 - **Fully static output.** Every route, including each blog post, is prerendered at build time (`generateStaticParams`). There is no client-side JavaScript beyond what Next.js ships by default, and no runtime data fetching.
-- **Markdown content with drafts.** Posts live in [`content/blog`](content/blog) as Markdown with front matter. Setting `draft: true` removes a post from the index and from the build. Its URL returns 404 because of `dynamicParams = false` ([`app/blog/[slug]/page.tsx`](app/blog/%5Bslug%5D/page.tsx)).
+- **Markdown content with drafts.** Posts live in [`content/blog`](content/blog) as Markdown with front matter. All post reading goes through one module ([`lib/posts.ts`](lib/posts.ts)), used by the home page, the blog index, the post pages and the sitemap. Setting `draft: true` removes a post from all of them. Its URL returns 404 because of `dynamicParams = false` ([`app/blog/[slug]/page.tsx`](app/blog/%5Bslug%5D/page.tsx)).
 - **Content as typed data.** Experience, skills and contact links are typed arrays rendered by small components, so updating the CV content doesn't mean editing markup ([`components/Experience.tsx`](components/Experience.tsx)).
 - **Built with AI agents, reviewed by me.** The site was built with Claude Code. [`.claude/skills`](.claude/skills) holds the conventions the agent was asked to follow. Every change goes through a PR with a Vercel preview before merging to `master`.
 
@@ -46,9 +46,10 @@ app/
   blog/page.tsx         # Blog index (published posts only)
   blog/[slug]/page.tsx  # Statically generated post pages
 components/             # Server components for each section
+lib/posts.ts            # Reads, filters and sorts Markdown posts
 content/blog/           # Markdown posts
 public/                 # Static assets, including the CV PDF
-docs/                   # Deployment, design system and responsive notes
+docs/                   # Deployment and responsive notes
 ```
 
 ## Writing a post

@@ -6,13 +6,13 @@ author: "Braulio De Leon"
 tags: ["leadership", "teamwork", "growth", "collaboration"]
 ---
 
-During the pandemic, I started cycling as a way to clear my head and take care of my health. I&apos;ve always enjoyed challenging myself, so I focused on riding longer distances and pushing my limits.
+During the pandemic, I started cycling as a way to clear my head and take care of my health. I've always enjoyed challenging myself, so I focused on riding longer distances and pushing my limits.
 
 Then I started using Strava, and everything became measurable. Distance, time, speed. Rankings.
 
 One metric, in particular, became an obsession: **segments**.
 
-For those who don&apos;t know them, segments are specific parts of a route where performance is compared on a leaderboard.
+For those who don't know them, segments are specific parts of a route where performance is compared on a leaderboard.
 
 In my category, there was always the same person at the top. For a long time, my goal was simple: beat that time. Improve that ranking.
 
@@ -36,14 +36,14 @@ At some point, I stopped checking segments altogether.
 
 A few days ago, I looked at them again by chance and noticed something unexpected: I was leading many of those leaderboards I once obsessed over.
 
-And it didn&apos;t really matter anymore.
+And it didn't really matter anymore.
 
 ---
 
 This time of the year often invites reflection.
 
-What changed wasn&apos;t my direction, but my focus.
+What changed wasn't my direction, but my focus.
 
-> Sometimes progress doesn&apos;t come from chasing numbers, but from choosing the right people to ride with.
+> Sometimes progress doesn't come from chasing numbers, but from choosing the right people to ride with.
 
 Whether in cycling, engineering, or life—the people you surround yourself with shape your trajectory more than any individual metric ever could.

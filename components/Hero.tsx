@@ -104,7 +104,7 @@ export function Hero(): JSX.Element {
             href="/braulio-de-leon-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-lg bg-brand-primary px-6 py-3 text-base font-medium text-white transition-colors hover:bg-blue-700 sm:px-8 sm:text-lg"
+            className="rounded-lg bg-brand-primary px-6 py-3 text-base font-medium text-brand-on transition-colors hover:bg-brand-hover sm:px-8 sm:text-lg"
           >
             Download CV
           </Link>
